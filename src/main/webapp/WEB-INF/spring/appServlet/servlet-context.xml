@@ -10,7 +10,7 @@
 	<interceptors>
         <interceptor>
             <mapping path="/**"/>
-            <beans:bean id="loggerInterceptor" class="com.hackday.deliveryTracker.LoggerInterceptor"></beans:bean>
+            <beans:bean id="loggerInterceptor" class="com.hackday.deliveryTracker.logger.LoggerInterceptor"></beans:bean>
         </interceptor>
     </interceptors>	
 	
