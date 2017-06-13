@@ -25,11 +25,23 @@ public class DeliveryTrackerController {
 	
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public String home(@RequestParam Map<String, Object> map, Model model) {
-		logger.info("====[DeliveryTrackerController.class]====");
+		logger.info("[DeliveryTrackerController.class]");
 		map.put("invoiceNumber", "698039088573"); map.put("deliveryCompany", "CJ대한통운");
 		List<DeliveryTrackerVo> deliveryTrackerList = deliveryTrackerService.getAllDeliveryTracker(map);
 		model.addAttribute("deliveryTrackerList", deliveryTrackerList);
 		logger.info(deliveryTrackerList.get(0).getDeliveryCompany());
 		return "home";
+	}
+	
+	@RequestMapping(value = "/login", method = RequestMethod.GET)
+	public String login() {
+		logger.info("[DeliveryTrackerController.class]");
+		return "login";
+	}
+	
+	@RequestMapping(value = "/admin", method = RequestMethod.GET)
+	public String admin() {
+		logger.info("[DeliveryTrackerController.class]");
+		return "admin";
 	}
 }

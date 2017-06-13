@@ -3,16 +3,16 @@
 <%@ page session="false" %>
 <html>
 <head>
-	<title>Home</title>
+	<title>Home Page</title>
 </head>
 <body>
-<h1>
-	Hello world!  
-</h1>
+<h1>Main Page</h1>
 
 <c:forEach items="${deliveryTrackerList }" var="deliveryTrackerList">
 	${deliveryTrackerList.invoiceNumber }	
 </c:forEach>
+
+	<a href="<c:url value='/login' />">Login</a>
 
 </body>
 </html>
