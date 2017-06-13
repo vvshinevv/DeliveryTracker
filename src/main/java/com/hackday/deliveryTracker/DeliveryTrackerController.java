@@ -28,6 +28,7 @@ public class DeliveryTrackerController {
 		logger.info("====[DeliveryTrackerController.class]====");
 		map.put("invoiceNumber", "698039088573"); map.put("deliveryCompany", "CJ대한통운");
 		List<DeliveryTrackerVo> deliveryTrackerList = deliveryTrackerService.getAllDeliveryTracker(map);
+		model.addAttribute("deliveryTrackerList", deliveryTrackerList);
 		logger.info(deliveryTrackerList.get(0).getDeliveryCompany());
 		return "home";
 	}

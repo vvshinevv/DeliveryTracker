@@ -13,17 +13,17 @@ public class LoggerInterceptor extends HandlerInterceptorAdapter {
 	private static final Logger logger = LoggerFactory.getLogger(LoggerInterceptor.class);
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
-//        if (logger.isDebugEnabled()) {
-//        	logger.debug("======================================          START         ======================================");
-//        	logger.debug(" Request URI \t:  " + request.getRequestURI());
-//        }
+        if (logger.isDebugEnabled()) {
+        	logger.debug("=============          START         =============");
+        	logger.debug(" Request URI \t:  " + request.getRequestURI());
+        }
         return super.preHandle(request, response, handler);
     }
      
     @Override
     public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler, ModelAndView modelAndView) throws Exception {
-//        if (logger.isDebugEnabled()) {
-//        	logger.debug("======================================           END          ======================================\n");
-//        }
+        if (logger.isDebugEnabled()) {
+        	logger.debug("=============           END          =============\n");
+        }
     }
 }

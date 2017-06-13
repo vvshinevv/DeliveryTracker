@@ -10,6 +10,9 @@
 	Hello world!  
 </h1>
 
-<P>  The time on the server is ${serverTime}. </P>
+<c:forEach items="${deliveryTrackerList }" var="deliveryTrackerList">
+	${deliveryTrackerList.invoiceNumber }	
+</c:forEach>
+
 </body>
 </html>
